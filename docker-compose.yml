@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - PORT=80
+    command: ["fastapi", "run", "app/main.py", "--port", "80"]
+  
